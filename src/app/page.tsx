@@ -1,101 +1,97 @@
 import Image from "next/image";
-
+import { siteConfig } from "@/config";
+import { jobs } from "@/config/constants";
+import { Icons } from "@/components/icons/icons";
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="mx-auto max-w-7xl px-6 md:px-16">
+      {/* heroSection */}
+      <section className="flex flex-col items-start justify-between gap-x-12 xl:flex-row xl:items-center xl:justify-center">
+        <div className="max-w-2xl duration-700 animate-in slide-in-from-top-full lg:max-w-2xl">
+          <h1 className="mb-6 min-w-full text-3xl font-black leading-tight tracking-tight sm:text-5xl lg:min-w-[700px] lg:leading-[3.7rem]">
+            Software engineer & <br />
+            open-source enthusiast
+          </h1>
+          <p className="text-base leading-relaxed text-foreground/60" >
+            I&apos;m a software engineer based form India. I&apos;m passionate
+            about building software products that solve real-world problems and
+            contribute to the open-source community.
+          </p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          <ul className="my-10 flex flex-wrap items-center gap-x-5 gap-y-4 duration-700 animate-in slide-in-from-bottom-full">
+            {
+              Object.values(siteConfig.links).map(({ title, href }, i) => (
+                <li key={i}>
+                  <a href={href}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    className="group flex item-center border-b border-border"
+                  >
+                    <span className="text-sm font-semibold text-foreground/80 group-hover:text-primary">
+                      {title}
+                    </span>
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <Icons.Hero className="h-full w-full duration-700 animate-in slide-in-from-bottom-1/3 lg:h-[450px] lg:w-[450px]" />
+      </section>
+
+      {/* workSection */}
+      <section className="duration-700 animate-in slide-in-from-bottom-full">
+        <div className="mb-16">
+          <h2 className="mb-4 text-4xl font-bold tracking-tight">
+            Work Experience
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 gap-x-12 gap-y-10 lg:grid-cols-2">
+          {jobs.map((data, i) => (
+            <div
+              key={i}
+              className="relative flex max-w-2xl items-start gap-x-4 before:absolute before:bottom-0 before:left-9 before:top-[5rem] before:h-[calc(100%-70px)] before:w-[1px] before:bg-muted lg:gap-x-6"
+            >
+              <a
+                href={data.url}
+                rel="noreferrer noopener"
+                target="_blank"
+                className={`relative grid min-h-[80px] min-w-[80px] place-items-center text-clip rounded-md border border-border p-2  bg-secondary/50 bg-white }`}
+              >
+                <Image
+                  src={data.logo}
+                  className={`object-cover duration-300  }`}
+                  alt={`${data.title} logo`}
+                  width={50}
+                  height={50}
+                />
+              </a>
+
+              <div className="flex flex-col items-start">
+                <h3 className="text-xl font-bold">{data.title}</h3>
+
+                <p>{data.jobTitle}</p>
+
+                <time className="mt-2 text-sm uppercase tracking-widest text-foreground/40">
+                  {data.startDate} -{" "}
+                  {data.endDate ? (
+                    data.endDate
+                  ) : (
+                    <span className="text-green-600 dark:text-green-300">
+                      Present
+                    </span>
+                  )}
+                </time>
+                <p className="my-4 tracking-tight text-foreground/60 hover:text-foreground/75">
+                  {data.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
     </div>
   );
 }
