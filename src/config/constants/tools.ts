@@ -5,17 +5,15 @@ import { Icons } from "@/components/icons/icons";
 
 const {
   Chrome,
-  Dart,
-  Firefox,
-  Flutter,
   Github,
   JavaScript,
   NextJs,
   React,
   Rust,
-  Svelte,
   TypeScript,
   VSCode,
+  Golang,
+  Arc
 } = Icons;
 
 export const tools: Tool[] = [
@@ -34,24 +32,24 @@ export const tools: Tool[] = [
         url: "https://nextjs.org/",
         icon: NextJs,
       },
-      {
-        name: "Svelte",
-        description: "Cybernetically enhanced web apps",
-        url: "https://svelte.dev/",
-        icon: Svelte,
-      },
-      {
-        name: "SvelteKit",
-        description: "Next generation web applications",
-        url: "https://kit.svelte.dev/",
-        icon: Svelte,
-      },
-      {
-        name: "Flutter",
-        description: "Build mobile, desktop and web apps with Flutter and Dart",
-        url: "https://flutter.dev/",
-        icon: Flutter,
-      },
+      // {
+      //   name: "Svelte",
+      //   description: "Cybernetically enhanced web apps",
+      //   url: "https://svelte.dev/",
+      //   icon: Svelte,
+      // },
+      // {
+      //   name: "SvelteKit",
+      //   description: "Next generation web applications",
+      //   url: "https://kit.svelte.dev/",
+      //   icon: Svelte,
+      // },
+      // {
+      //   name: "Flutter",
+      //   description: "Build mobile, desktop and web apps with Flutter and Dart",
+      //   url: "https://flutter.dev/",
+      //   icon: Flutter,
+      // },
     ],
   },
 
@@ -78,10 +76,10 @@ export const tools: Tool[] = [
         icon: Rust,
       },
       {
-        name: "Dart",
-        description: "Client-optimized language for fast apps on any platform",
-        url: "https://dart.dev/",
-        icon: Dart,
+        name: "go-lang",
+        description: "An open source programming language that makes it easy to build simple, reliable, and efficient software",
+        url: "https://golang.org/",
+        icon: Golang
       },
     ],
   },
@@ -109,10 +107,10 @@ export const tools: Tool[] = [
         icon: Chrome,
       },
       {
-        name: "Firefox",
-        description: "A fast, private and secure browser",
-        url: "https://www.mozilla.org/en-US/firefox/new/",
-        icon: Firefox,
+        name: "Arc Browser",
+        description: "A fast, secure, and free web browser",
+        url: "https://arc.net/",
+        icon: Arc,
       },
     ],
   },
@@ -121,9 +119,9 @@ export const tools: Tool[] = [
     heading: "Hardware",
     items: [
       {
-        name: "Acer Aspire 7",
+        name: "MacBook air m1",
         description: "My daily driver",
-        url: "https://www.acer.com/ac/en/US/content/series/aspire7",
+        url: "https://www.apple.com/macbook-air/",
         icon: Laptop,
       },
     ],
