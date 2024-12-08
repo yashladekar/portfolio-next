@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Quote } from "lucide-react";
 
 import { heroes, tools } from "@/config/constants";
-import { siteConfig } from "@/config/";
+import { siteConfig } from "@/config";
 import { cn } from "@/lib/utils";
 // import EasterEgg from "./easter-egg";
 // import AboutSidebar from "@/app/about/sidebar";
