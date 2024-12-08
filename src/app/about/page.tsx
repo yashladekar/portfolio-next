@@ -2,11 +2,11 @@ import { Metadata } from "next";
 import Image from "next/image";
 import { Quote } from "lucide-react";
 
-import { heroes, tools } from "@/config/constants";
-import { siteConfig } from "@/config/";
-import { cn } from "@/lib/utils";
+import { heroes, tools } from "../../config/constants";
+import { siteConfig } from "../../config/";
+import { cn } from "../../lib/utils";
 // import EasterEgg from "./easter-egg";
-import AboutSidebar from "@/app/about/sidebar";
+// import AboutSidebar from "@/app/about/sidebar";
 
 export const metadata: Metadata = {
     title: "About | Hemant Rajput",
@@ -43,7 +43,7 @@ export default function About() {
                     </div>
                 </div>
 
-                <AboutSidebar />
+                {/* <AboutSidebar /> */}
             </section>
 
             {/* Setup */}
