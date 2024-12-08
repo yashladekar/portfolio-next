@@ -5,7 +5,6 @@ import { Eye } from "lucide-react";
 import { projects } from "@/config/constants";
 import { siteConfig } from "@/config/";
 
-
 export const metadata: Metadata = {
     title: `Project | ${siteConfig.author.name}`,
     description: `Explore projects built by ${siteConfig.author.name}`,
@@ -38,7 +37,7 @@ export default function Projects() {
                     ({ projectUrl: { github, live }, logo, name, tagline }, i) => (
                         <a
                             key={i}
-                            href={github}
+                            href={live || github}
                             target="_blank"
                             className="group flex items-center gap-x-4 rounded-lg border bg-secondary/50 p-4 duration-300 hover:bg-secondary/90 hover:shadow-md"
                         >

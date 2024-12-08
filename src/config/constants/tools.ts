@@ -32,24 +32,6 @@ export const tools: Tool[] = [
         url: "https://nextjs.org/",
         icon: NextJs,
       },
-      // {
-      //   name: "Svelte",
-      //   description: "Cybernetically enhanced web apps",
-      //   url: "https://svelte.dev/",
-      //   icon: Svelte,
-      // },
-      // {
-      //   name: "SvelteKit",
-      //   description: "Next generation web applications",
-      //   url: "https://kit.svelte.dev/",
-      //   icon: Svelte,
-      // },
-      // {
-      //   name: "Flutter",
-      //   description: "Build mobile, desktop and web apps with Flutter and Dart",
-      //   url: "https://flutter.dev/",
-      //   icon: Flutter,
-      // },
     ],
   },
 
